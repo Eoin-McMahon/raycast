@@ -12,24 +12,22 @@ class Source:
 
     def show(self):
         fill(255)
-        circle((self.pos.x, self.pos.y), 8)
+        circle((self.pos.x, self.pos.y), 16)
         for ray in self.rays:
             ray.show()
 
     def cast(self, walls):
-        for ray in self.rays:
+        for i, ray in enumerate(self.rays):
             closest = None
-            maximum = 100000000
+            record = 10000000000000
             for wall in walls:
-                pt = ray.cast(wall)
-                if (pt):
-                    d = Vector.dist(self.pos, pt)
-                    if d < maximum:
+                pt, d = ray.cast(wall)
+                if pt != None:
+                    if d < record:
                         record = d
                         closest = pt
-
             if closest:
-                stroke(255, 100)
+                stroke(i % 360, 255, 255, 50);
                 line((self.pos.x, self.pos.y), (closest.x, closest.y))
 
     def update(self, x, y):

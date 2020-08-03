@@ -3,14 +3,14 @@ from p5 import *
 class Ray():
     def __init__(self, position, theta):
         self.pos = position
-        self.dir = Vector.from_angle(theta) * 20
+        self.dir = Vector.from_angle(theta)
 
     def show(self):
         stroke(255);
-        push_style()
-        translate(self.pos.x, self.pos.y)
-        line((0,0), (self.dir.x, self.dir.y))
-        pop_style()
+        #push_style()
+        #translate(self.pos.x, self.pos.y)
+        line((0,0), (self.dir.x * 10, self.dir.y * 10))
+        #pop_style()
 
     def set_direction(self, x, y):
         self.dir.x = x - self.pos.x
@@ -38,7 +38,7 @@ class Ray():
 
         # ray and wall are parallel
         if bottom == 0:
-            return None
+            return None, None
 
         t = top_for_t / bottom
         u = -top_for_u / bottom
@@ -48,10 +48,10 @@ class Ray():
             y = y3 + (u * (y4 - y3))
             point = Vector(x, y)
             
-            return point
+            return point, u
        
         else:
-            return None
+            return None, None
 
 
 

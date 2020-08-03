@@ -7,7 +7,10 @@ walls = []
 source = Source()
 
 def setup():
-    size(800, 800)  # Size should be the first statement
+    width = 600
+    height = 600
+    size(width, height)  # Size should be the first statement
+
     for i in range(5):
         x1 = random_uniform(width, 0)
         x2 = random_uniform(width, 0)
@@ -23,7 +26,7 @@ def setup():
 
 
 def draw():
-    background(40) # Set the background to black
+    background(0) # Set the background to black
     for wall in walls:
         wall.show()
     
