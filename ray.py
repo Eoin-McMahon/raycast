@@ -7,10 +7,10 @@ class Ray():
 
     def show(self):
         stroke(255);
-        #push_style()
+        push_style()
         #translate(self.pos.x, self.pos.y)
         line((0,0), (self.dir.x * 10, self.dir.y * 10))
-        #pop_style()
+        pop_style()
 
     def set_direction(self, x, y):
         self.dir.x = x - self.pos.x
@@ -44,8 +44,8 @@ class Ray():
         u = -top_for_u / bottom
 
         if t >= 0 and t <= 1 and u >= 0:
-            x = x3 + (u * (x4 - x3))
-            y = y3 + (u * (y4 - y3))
+            x = x1 + (t * (x2 - x1))
+            y = y1 + (t * (y2 - y1))
             point = Vector(x, y)
             
             return point, u
