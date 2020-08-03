@@ -1,14 +1,16 @@
 from p5 import *
 
 class Ray():
-    def __init__(self, x, y):
-        self.pos = Vector(x, y)
-        self.dir = Vector(1,0)
+    def __init__(self, position, theta):
+        self.pos = position
+        self.dir = Vector.from_angle(theta) * 20
 
     def show(self):
         stroke(255);
+        push_style()
         translate(self.pos.x, self.pos.y)
-        line((0, 0), (self.dir.x * 10, self.dir.y * 10))
+        line((0,0), (self.dir.x, self.dir.y))
+        pop_style()
 
     def set_direction(self, x, y):
         self.dir.x = x - self.pos.x
@@ -19,8 +21,8 @@ class Ray():
     def cast(self, wall):
         # wall geometry
         x1 = wall.a.x
-        x2 = wall.b.x
         y1 = wall.a.y
+        x2 = wall.b.x
         y2 = wall.b.y
 
         # ray geometry
@@ -32,19 +34,24 @@ class Ray():
         # https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
         top_for_t = (x1 - x3) * (y3 - y4) - (y1 - y3) * (x3 - x4)
         top_for_u = (x1 - x2) * (y1 - y3) - (y1 - y2) * (x1 - x3)
-        bottom = (x1-x2) * (y3-y4) - (y1-y2) * (x3-x4)
+        bottom =    (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
 
         # ray and wall are parallel
         if bottom == 0:
-            return
+            return None
 
         t = top_for_t / bottom
-        u = - (top_for_u / bottom)
+        u = -top_for_u / bottom
 
-        if t > 0 and t < 1 and u > 0:
-            return True
-        
-        return
+        if t >= 0 and t <= 1 and u >= 0:
+            x = x3 + (u * (x4 - x3))
+            y = y3 + (u * (y4 - y3))
+            point = Vector(x, y)
+            
+            return point
+       
+        else:
+            return None
 
 
 
