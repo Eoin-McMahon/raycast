@@ -3,16 +3,18 @@
 <p>
   
 # 💡 Raycast
-a python raycasting demo using p5py
-
-This is a port based off of the javascript implementation shown here: https://www.youtube.com/watch?v=TOEi6T2mtHo&t=1708s
-This should be more performant however, i noticed there were a number of duplicate heavy calculations being made in the video which have been fixed here.
+* A python raycasting demo using p5py
+* This is a port based off of the javascript implementation shown here: https://www.youtube.com/watch?v=TOEi6T2mtHo&t=1708s
+* This should be (it isn't because unlike p5js, its not built ontop of the skia engine) more performant however than the video, I noticed there were a number of duplicate heavy calculations being made in the video which have been fixed here.
 
 
 ### 📓 Requirements:
-* Python 3 or above
+##### system
+* Python 3
+* Glfw: install it using this link: https://p5.readthedocs.io/en/latest/install.html#installing-p5
+##### pip
+* absl-py
 * p5py
-* Glfw: most linux distros have it but if not install it using this link: https://p5.readthedocs.io/en/latest/install.html#installing-p5
 
 ### 📦 Installation:
 * make sure you are using pip for python 3
@@ -21,10 +23,6 @@ This should be more performant however, i noticed there were a number of duplica
 # installs the requirements for the program
 pip install -r requirements.txt --user
 ```
-### 🔧 Demo
-<p align="center">
-<img src="./assets/demo.gif" alt="demo" style="width:100%;">
-</p>
 
 ### ✨ Examples:
 ```bash
@@ -40,3 +38,8 @@ python3 main.py --auto
 # set number of rays to 36, the smaller the number, the more performant
 python3 main.py --rays 36
 ```
+
+### 🔧 Demo
+<p align="center">
+<img src="./assets/demo.gif" alt="demo" style="width:100%;">
+</p>
