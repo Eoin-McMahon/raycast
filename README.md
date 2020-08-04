@@ -18,4 +18,4 @@ pip install -r requirements.txt
 Run the code:
 ```bash
 python3 main.py
-``
+```
