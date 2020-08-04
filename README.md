@@ -22,5 +22,10 @@ pip install -r requirements.txt --user
 
 Run the code:
 ```bash
+# use the mouse as input
 python3 main.py
+```
+```bash
+# auto move the source particle
+python3 main.py --auto
 ```
