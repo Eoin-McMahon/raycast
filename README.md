@@ -1,5 +1,6 @@
 
 <img src="https://raw.githubusercontent.com/Eoin-McMahon/raycast/master/raycast_image.png" alt="banner" style="width:100%;">
+<img src="./assets/demo.gif" alt="demo" style="width:100%;">
 
 # raycast
 Python raycasting demo using p5py
