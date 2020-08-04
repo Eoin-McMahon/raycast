@@ -1,6 +1,7 @@
+<p align="center">
 
 <img src="./assets/raycast_image.png" alt="banner" style="width:100%;">
-
+<p>
 # raycast
 Python raycasting demo using p5py
 
@@ -21,8 +22,9 @@ This should be more performant however, i noticed there were a number of duplica
 pip install -r requirements.txt --user
 ```
 ### Demo
+<p align="center">
 <img src="./assets/demo.gif" alt="demo" style="width:100%;">
-
+</p>
 
 ### Run the code:
 ```bash
