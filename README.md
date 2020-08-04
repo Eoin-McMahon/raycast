@@ -1,3 +1,5 @@
+![](./raycast_image.png =250x)
+
 # raycast
 Python raycasting demo using p5py
 
