@@ -17,6 +17,7 @@ Installation:
 * make sure you are using pip for python 3
 * run the following command:
 ```bash
+# installs the requirements for the program
 pip install -r requirements.txt --user
 ```
 
@@ -28,4 +29,9 @@ python3 main.py
 ```bash
 # auto move the source particle
 python3 main.py --auto
+```
+
+```bash
+# set number of rays to 180, the smaller the number, the more performant
+python3 main.py --rays 180
 ```

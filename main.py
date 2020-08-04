@@ -38,8 +38,6 @@ def setup():
     walls.append(Wall(width, height, 0, height))
     walls.append(Wall(0, height, 0, 0))
 
-    
-
 
 def draw():
     global x_off
