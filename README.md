@@ -1,6 +1,6 @@
 <h2 align="center">
   <br>
- <img src="./assets/banner.png" alt="banner" style="width:100%;">
+ <img src="./assets/banner.png?v=1" alt="banner" style="width:100%;">
   <br>
   <br>
 </h2>
