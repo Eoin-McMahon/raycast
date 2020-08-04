@@ -1,6 +1,5 @@
 
-<img src="https://raw.githubusercontent.com/Eoin-McMahon/raycast/master/raycast_image.png" alt="banner" style="width:100%;">
-<img src="./assets/demo.gif" alt="demo" style="width:100%;">
+<img src="./assets/raycast_image.png" alt="banner" style="width:100%;">
 
 # raycast
 Python raycasting demo using p5py
@@ -9,20 +8,23 @@ This is a port based off of the javascript implementation shown here: https://ww
 This should be more performant however, i noticed there were a number of duplicate heavy calculations being made in the video which have been fixed here.
 
 
-Requirements:
+### Requirements:
 * Python 3 or above
 * p5py
 * Glfw: most linux distros have it but if not install it using this link: https://p5.readthedocs.io/en/latest/install.html#installing-p5
 
-Installation:
+### Installation:
 * make sure you are using pip for python 3
 * run the following command:
 ```bash
 # installs the requirements for the program
 pip install -r requirements.txt --user
 ```
+### Demo
+<img src="./assets/demo.gif" alt="demo" style="width:100%;">
 
-Run the code:
+
+### Run the code:
 ```bash
 # use the mouse as input
 python3 main.py
