@@ -7,6 +7,8 @@ from absl import flags, app
 FLAGS = flags.FLAGS
 
 flags.DEFINE_boolean('auto', False, 'Moves the source particle automatically')
+flags.DEFINE_integer('rays', 45, 'Moves the source particle automatically', lower_bound=0)
+
 
 walls = []
 auto_move = False
@@ -50,7 +52,9 @@ def draw():
 
     source_pos = noise_pos if (auto_move==True) else mouse_pos
 
-    source = Source(source_pos)
+    ray_step = 360 / FLAGS.rays
+    source = Source(source_pos, int(ray_step))
+
     background(0) # Set the background to black
 
     for wall in walls:

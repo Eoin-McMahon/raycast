@@ -3,10 +3,10 @@ from ray import Ray
 from wall import Wall
 
 class Source:
-    def __init__(self, pos):
+    def __init__(self, pos, ray_step):
         self.pos = pos
         self.rays = []
-        for i in range(0,360, 12):
+        for i in range(0,360, ray_step):
             ray = Ray(self.pos, radians(i))
             self.rays.append(ray)
 
