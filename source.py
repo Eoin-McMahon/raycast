@@ -6,7 +6,7 @@ class Source:
     def __init__(self, pos):
         self.pos = pos
         self.rays = []
-        for i in range(0,360):
+        for i in range(0,360, 2):
             ray = Ray(self.pos, radians(i))
             self.rays.append(ray)
 
@@ -26,9 +26,9 @@ class Source:
                     if d < record:
                         record = d
                         closest = pt
-            if closest:
-                stroke(255)
+            if closest != None:
+                stroke(255, 100)
                 line((self.pos.x, self.pos.y), (closest.x, closest.y))
 
-    def update(self, x, y):
-        self.pos = Vector(x,y, 0.0)
+    def update(self, new_pos):
+        self.pos = new_pos

@@ -8,7 +8,6 @@ class Ray():
     def show(self):
         stroke(255)
         push_style()
-        # translate(self.pos.x, self.pos.y)
         line((0,0), (self.dir.x * 10, self.dir.y * 10))
         pop_style()
 
