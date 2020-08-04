@@ -4,7 +4,6 @@ from ray import Ray
 from source import Source
 
 walls = []
-source = Source()
 
 def setup():
     width = 600
@@ -24,15 +23,20 @@ def setup():
     walls.append(Wall(width, height, 0, height))
     walls.append(Wall(0, height, 0, 0))
 
+    
+
 
 def draw():
+    source = Source(Vector(mouse_x, mouse_y))
     background(0) # Set the background to black
+
     for wall in walls:
         wall.show()
     
     source.update(mouse_x, mouse_y)
     source.show()
     source.cast(walls)
+
 
 if __name__ == '__main__':
     run()

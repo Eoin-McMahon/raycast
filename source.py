@@ -3,10 +3,10 @@ from ray import Ray
 from wall import Wall
 
 class Source:
-    def __init__(self):
-        self.pos = Vector(width/2, height/2, 0.0)
+    def __init__(self, pos):
+        self.pos = pos
         self.rays = []
-        for i in range(0,360,12):
+        for i in range(0,360):
             ray = Ray(self.pos, radians(i))
             self.rays.append(ray)
 
@@ -21,17 +21,14 @@ class Source:
             closest = None
             record = 10000000000000
             for wall in walls:
-                pt, d = ray.cast(wall)
-
-                print(pt)
-                
+                pt, d = ray.cast(wall)                
                 if pt != None:
                     if d < record:
                         record = d
                         closest = pt
             if closest:
-                stroke(255);
+                stroke(255)
                 line((self.pos.x, self.pos.y), (closest.x, closest.y))
 
     def update(self, x, y):
-        self.pos = Vector(x,y)
+        self.pos = Vector(x,y, 0.0)

@@ -6,9 +6,9 @@ class Ray():
         self.dir = Vector.from_angle(theta)
 
     def show(self):
-        stroke(255);
+        stroke(255)
         push_style()
-        #translate(self.pos.x, self.pos.y)
+        # translate(self.pos.x, self.pos.y)
         line((0,0), (self.dir.x * 10, self.dir.y * 10))
         pop_style()
 
@@ -46,7 +46,7 @@ class Ray():
         if t >= 0 and t <= 1 and u >= 0:
             x = x1 + (t * (x2 - x1))
             y = y1 + (t * (y2 - y1))
-            point = Vector(x, y)
+            point = Vector(x, y, 0.0)
             
             return point, u
        
