@@ -1,13 +1,12 @@
-<h1 align="center">
+<h2 align="center">
   <br>
  <img src="./assets/banner.png" alt="banner" style="width:100%;">
   <br>
   <br>
-</h1>
+</h2>
   
-<h1 align="center">💡 Raycast </h1>
+# 💡 Raycast
 
-<hr>
 
 * A python raycasting demo using p5py
 * This is a port based off of the javascript implementation shown here: https://www.youtube.com/watch?v=TOEi6T2mtHo&t=1708s
