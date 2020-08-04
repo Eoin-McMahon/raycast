@@ -4,9 +4,14 @@
 # raycast
 Python raycasting demo using p5py
 
+This is a port based off of the javascript implementation shown here: https://www.youtube.com/watch?v=TOEi6T2mtHo&t=1708s
+This should be more performant however, i noticed there were a number of duplicate heavy calculations being made in the video which have been fixed here.
+
+
 Requirements:
 * Python 3 or above
 * p5py
+* Glfw: most linux distros have it but if not install it using this link: https://p5.readthedocs.io/en/latest/install.html#installing-p5
 
 Installation:
 * make sure you are using pip for python 3
