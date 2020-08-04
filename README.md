@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="./assets/raycast_image.png" alt="banner" style="width:100%;">
+<img src="./assets/banner.png" alt="banner" style="width:100%;">
 <p>
 # raycast
 Python raycasting demo using p5py
