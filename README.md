@@ -17,7 +17,7 @@ Installation:
 * make sure you are using pip for python 3
 * run the following command:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt --user
 ```
 
 Run the code:
