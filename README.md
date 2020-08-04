@@ -1,12 +1,22 @@
-<p align="center">
-<img src="./assets/banner.png" alt="banner" style="width:100%;">
-<p>
+<h1 align="center">
+  <br>
+ <img src="./assets/banner.png" alt="banner" style="width:100%;">
+  <br>
+  <br>
+</h1>
   
-# 💡 Raycast
+<h1 align="center">💡 Raycast </h1>
+
+<hr>
+
 * A python raycasting demo using p5py
 * This is a port based off of the javascript implementation shown here: https://www.youtube.com/watch?v=TOEi6T2mtHo&t=1708s
 * This should be (it isn't because unlike p5js, its not built ontop of the skia engine) more performant however than the video, I noticed there were a number of duplicate heavy calculations being made in the video which have been fixed here.
 
+### 🔧 Demo
+<p align="center">
+<img src="./assets/demo.gif" alt="demo" style="width:100%;">
+</p>
 
 ### 📓 Requirements:
 ##### system
@@ -38,8 +48,3 @@ python3 main.py --auto
 # set number of rays to 36, the smaller the number, the more performant
 python3 main.py --rays 36
 ```
-
-### 🔧 Demo
-<p align="center">
-<img src="./assets/demo.gif" alt="demo" style="width:100%;">
-</p>
