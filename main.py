@@ -2,21 +2,25 @@ from p5 import *
 from wall import Wall
 from ray import Ray
 from source import Source
-from absl import flags
+from absl import flags, app
 
 FLAGS = flags.FLAGS
 
 flags.DEFINE_boolean('auto', False, 'Moves the source particle automatically')
 
 walls = []
-auto_move = FLAGS.auto
+auto_move = False
 
 x_off = 0
 y_off = 10000
 
+def main(argv):
+    run()
+
 def setup():
-    width = 500
-    height = 500
+    width = 700
+    height = 700
+    mouse_x, mouse_y= 250, 250
     size(width, height)  # Size should be the first statement
 
     for i in range(5):
@@ -38,6 +42,8 @@ def setup():
 def draw():
     global x_off
     global y_off
+    global auto_move
+    auto_move = FLAGS.auto
 
     noise_pos = Vector(noise(x_off) * width, noise(y_off) * height)
     mouse_pos = Vector(mouse_x, mouse_y)
@@ -60,4 +66,4 @@ def draw():
 
 
 if __name__ == '__main__':
-    run()
+    app.run(main)

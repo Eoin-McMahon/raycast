@@ -6,7 +6,7 @@ class Source:
     def __init__(self, pos):
         self.pos = pos
         self.rays = []
-        for i in range(0,360, 2):
+        for i in range(0,360, 12):
             ray = Ray(self.pos, radians(i))
             self.rays.append(ray)
 
