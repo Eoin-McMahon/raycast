@@ -24,7 +24,7 @@ def main(argv):
 
 def setup():
     width = 700
-    height = width
+    height = 500
     mouse_x, mouse_y= 250, 250
     size(width, height)  # Size should be the first statement
 
