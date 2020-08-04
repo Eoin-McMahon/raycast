@@ -1,4 +1,5 @@
-![](./raycast_image.png =250x)
+
+<img src="https://raw.githubusercontent.com/Eoin-McMahon/raycast/master/raycast_image.png" alt="banner" style="width:100%;">
 
 # raycast
 Python raycasting demo using p5py
@@ -17,4 +18,4 @@ pip install -r requirements.txt
 Run the code:
 ```bash
 python3 main.py
-```
+``
