@@ -17,6 +17,7 @@ class Ray():
         self.dir.normalize()
 
 
+    # returns coordinate at which the ray meets the wall
     def cast(self, wall):
         # wall geometry
         x1 = wall.a.x

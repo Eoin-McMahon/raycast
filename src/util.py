@@ -1,3 +1,4 @@
+# squezes or streches a number range to another. 
 def remap_number_range(value, leftMin, leftMax, rightMin, rightMax):
     # Figure out how 'wide' each range is
     leftSpan = leftMax - leftMin
